@@ -25,7 +25,8 @@ const Item = ({title, content, image}) => {
             {content}
           </Typography>
         </CardContent>
-        <MyButton >Subscribe</MyButton>
+        <MyButton>Subscribe</MyButton>
+        <MyButton>Copy Text</MyButton>
       </Card>
     </Grid>
   )
