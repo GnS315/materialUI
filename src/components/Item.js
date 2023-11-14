@@ -1,6 +1,7 @@
 import React from "react";
 import {Grid, CardContent, Typography, Card, CardMedia} from "@mui/material";
 import MyButton from "./MyButton";
+import FlexWrapper from "./FlexWrapper";
 
 const Item = ({title, content, image}) => {
   return (
@@ -25,8 +26,10 @@ const Item = ({title, content, image}) => {
             {content}
           </Typography>
         </CardContent>
-        <MyButton>Subscribe</MyButton>
-        <MyButton>Copy Text</MyButton>
+        <FlexWrapper>
+          <MyButton>Subscribe</MyButton>
+          <MyButton onClick={() => window.navigator.clipboard.writeText(title)}>copy title</MyButton>
+        </FlexWrapper>
       </Card>
     </Grid>
   )
