@@ -33,7 +33,7 @@ const Item = ({title, content, image}) => {
           <MyButton
               onClick={() => window.navigator.clipboard.writeText(titleWithSource)}
           >
-            copy title
+            Copy title
           </MyButton>
         </FlexWrapper>
       </Card>
