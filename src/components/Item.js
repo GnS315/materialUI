@@ -4,6 +4,8 @@ import MyButton from "./MyButton";
 import FlexWrapper from "./FlexWrapper";
 
 const Item = ({title, content, image}) => {
+  const titleWithSource = `Источник: ${window.location.href}\n${title}`
+
   return (
     <Grid item xs={12} md={4}>
       <Card sx={{ maxWidth: 375 }}>
@@ -28,7 +30,11 @@ const Item = ({title, content, image}) => {
         </CardContent>
         <FlexWrapper>
           <MyButton>Subscribe</MyButton>
-          <MyButton onClick={() => window.navigator.clipboard.writeText(title)}>copy title</MyButton>
+          <MyButton
+              onClick={() => window.navigator.clipboard.writeText(titleWithSource)}
+          >
+            copy title
+          </MyButton>
         </FlexWrapper>
       </Card>
     </Grid>
